@@ -1,6 +1,8 @@
 # Base image
 FROM python:3.9-slim
 
+ENV GOOGLE_CLOUD_BUILD_LOGGING=CLOUD_LOGGING_ONLY
+
 # Install system dependencies, build tools, and libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
