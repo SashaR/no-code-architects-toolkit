@@ -1,5 +1,6 @@
 options:
-  logging: CLOUD_LOGGING_ONLY  # Use Cloud Logging
+  logging: GCS_ONLY  # Use Cloud Storage for logging
+  logsBucket: 'gs://nca-toolkit-bucket-ghf'  # Specify your logs bucket
 
 steps:
 - name: 'gcr.io/cloud-builders/docker'
