@@ -1,10 +1,9 @@
 options:
-  logging: GCS_ONLY  # Use Cloud Storage for logging
-  logsBucket: 'gs://nca-toolkit-bucket-ghf'  # Specify your logs bucket
+  logging: CLOUD_LOGGING_ONLY  # Use Cloud Logging
 
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/nca-toolkit-project-446011/no-code-architects-toolkit:$COMMIT_SHA', '.']
 
 images:
-- 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA'
+- 'gcr.io/nca-toolkit-project-446011/no-code-architects-toolkit:$COMMIT_SHA'
